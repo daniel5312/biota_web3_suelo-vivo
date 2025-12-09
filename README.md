@@ -63,7 +63,7 @@ Spanish:
 
 ![License](https://img.shields.io/badge/license-MIT-green) ![Celo](https://img.shields.io/badge/network-Celo-yellow) ![Status](https://img.shields.io/badge/status-In%20Development-blue)
 
-**(Español 🇪🇸)**
+**(Español )**
 
 ## 👋 Sobre el Proyecto
 ¡Hola! Bienvenido al repositorio de **Biota Suelo Vivo**. Este proyecto es una dApp (Aplicación Descentralizada) construida sobre la red **Celo**, enfocada en la regeneración de suelos y la transparencia de datos mediante Blockchain (ReFi - Regenerative Finance).
