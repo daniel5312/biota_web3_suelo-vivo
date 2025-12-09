@@ -1,0 +1,44 @@
+echo ".vscode/" >> .gitignore
+echo ".~lock*" >> .gitignore
+# --- Dependencias (Lo más pesado) ---
+node_modules/
+package-lock.json # Opcional: algunos prefieren subirlo, otros no. Si usas yarn, ignora yarn.lock si quieres.
+
+# --- SEGURIDAD (CRÍTICO para Web3) ---
+# NUNCA subas tus seed phrases o private keys
+.env
+.env.local
+.env.*.local
+
+# --- Smart Contracts (Hardhat/Foundry) ---
+# Archivos generados al compilar
+artifacts/
+cache/
+coverage/
+typechain/
+typechain-types/
+
+# --- Frontend (Web) ---
+# Archivos de producción
+dist/
+build/
+.next/
+out/
+
+# --- Sistema y Editores ---
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.~lock*node_modules/
+.env
+.env.local
+dist/
+build/
+artifacts/
+cache/
+coverage/
+.DS_Store
+*.log
+.vscode/
+.~lock*
