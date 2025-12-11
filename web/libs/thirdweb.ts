@@ -27,4 +27,5 @@ export const getBiotaContract = () => {
         chain: celoAlfajores, // Estamos en modo Testnet
         address: BIOTA_CONTRACT_ADDRESS
     });
-};*/ 
+};*/
+0x15cef749a43f7546882a2b1055edc98aedd4e32a

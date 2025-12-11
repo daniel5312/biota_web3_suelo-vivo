@@ -1,15 +1,54 @@
 "use client";
 
+import "./globals.css";
+import "@rainbow-me/rainbowkit/styles.css"; // Estilos de la wallet
+
+import { WagmiProvider } from "wagmi";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { RainbowKitProvider, lightTheme } from "@rainbow-me/rainbowkit";
+import { config } from "@/config/wagmi";
+import AuthGuard from "@/components/authGuard"; // <--- IMPORTANTE: El Guardia
+
+const queryClient = new QueryClient();
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="es">
+      <body style={{ fontFamily: "system-ui, sans-serif" }}>
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient}>
+            <RainbowKitProvider
+              theme={lightTheme({
+                accentColor: "#10B981",
+                borderRadius: "medium",
+              })}
+              modalSize="compact"
+            >
+              {/* AQUÍ ESTÁ LA CLAVE: El AuthGuard envuelve todo */}
+              <AuthGuard>{children}</AuthGuard>
+            </RainbowKitProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
+      </body>
+    </html>
+  );
+}
+/*"use client";
+
 // 1. Importaciones de Estilos y Fuentes
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import "./globals.css";
 
 // 2. Importaciones de Proveedores Web3
-import { PrivyProvider } from "@privy-io/react-auth";
-import { ThirdwebProvider } from "thirdweb/react";
-import { celo, celoAlfajores } from "viem/chains";
+//import { PrivyProvider } from "@privy-io/react-auth";
+//import { ThirdwebProvider } from "thirdweb/react";
+//import { celo, celoAlfajores } from "viem/chains";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
@@ -19,8 +58,8 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body className={inter.className}>
-        {/* Envolvemos la App con los proveedores necesarios */}
-        <ThirdwebProvider>
+        {/* Envolvemos la App con los proveedores necesarios }
+       /* <ThirdwebProvider>
           <PrivyProvider
             appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID || ""}
             config={{
@@ -44,4 +83,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+}*/

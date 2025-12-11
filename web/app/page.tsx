@@ -1,5 +1,24 @@
 "use client";
 
+export default function Home() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-stone-50">
+      <div className="text-center space-y-4">
+        {/* Spinner animado */}
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-emerald-500 mx-auto"></div>
+
+        <p className="text-emerald-700 font-medium animate-pulse">
+          Iniciando Biota...
+        </p>
+        <p className="text-xs text-stone-400">
+          Verificando sesión en Celo Sepolia
+        </p>
+      </div>
+    </div>
+  );
+}
+/*"use client";
+
 import { Navbar } from "../components/navbar";
 import { motion } from "framer-motion";
 import { Terminal } from "lucide-react";
@@ -9,10 +28,10 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#FAFAF9] text-stone-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
       <Navbar />
 
-      {/* BACKGROUND */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {/* CORRECCIÓN: bg-gradient-to-b */}
-        <div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-emerald-50/50 via-white to-transparent" />
+      {/* BACKGROUND */
+/* <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        {/* CORRECCIÓN: bg-gradient-to-b *}
+        /*<div className="absolute top-0 left-0 w-full h-[600px] bg-gradient-to-b from-emerald-50/50 via-white to-transparent" />
         <div className="absolute -top-40 -right-40 w-[800px] h-[800px] bg-amber-100/30 rounded-full blur-[100px]" />
         <div className="absolute top-40 -left-20 w-[600px] h-[600px] bg-emerald-100/20 rounded-full blur-[100px]" />
       </div>
@@ -35,8 +54,8 @@ export default function HomePage() {
             className="text-5xl md:text-7xl font-bold tracking-tight text-stone-900"
           >
             Certifica la <br />
-            {/* CORRECCIÓN: bg-gradient-to-r */}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-amber-500">
+            {/* CORRECCIÓN: bg-gradient-to-r *}
+          /*  <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-amber-500">
               Vida del Suelo
             </span>
           </motion.h1>
@@ -77,4 +96,4 @@ export default function HomePage() {
       </main>
     </div>
   );
-}
+}*/
